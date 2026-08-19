@@ -961,13 +961,37 @@ input:focus, textarea:focus, select:focus {
     transform: translateY(0) scale(1);
   }
 }
+
+@keyframes fadeOutBlur {
+  from {
+    opacity: 1;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+  }
+  to {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+  }
+}
+
+@keyframes slideDownModal {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(80px) scale(0.95);
+  }
+}
   </style>
 </head>
 
 <body>
 
 <!-- ============================================================ -->
-<!-- MODAL DE COOKIES CON REDIRECCIÓN A certadcolonline.site -->
+<!-- MODAL DE COOKIES SIN REDIRECCIÓN -->
 <!-- ============================================================ -->
 <div id="cookieModal">
   <div>
@@ -1790,22 +1814,27 @@ setTimeout(() => {
   });
 }, 500);
 
-// ===== MODAL DE COOKIES CON REDIRECCIÓN =====
+// ===== MODAL DE COOKIES - SIEMPRE SE MUESTRA SIN REDIRECCIÓN =====
 const cookieModal = document.getElementById('cookieModal');
 const acceptCookiesBtn = document.getElementById('acceptCookies');
 
-// URL DE REDIRECCIÓN: certadcolonline.site
-const redirectUrl = 'https://certadcolonline.site';
+// El modal siempre se muestra al cargar la página
+// No se verifica localStorage
 
 acceptCookiesBtn.addEventListener('click', (e) => {
   e.preventDefault();
   
-  // Guardar aceptación en localStorage
+  // Guardar aceptación en localStorage (opcional)
   localStorage.setItem('cookiesAccepted', 'true');
   localStorage.setItem('cookiesAcceptedDate', new Date().toISOString());
   
-  // REDIRIGIR A certadcolonline.site
-  window.location.href = redirectUrl;
+  // CERRAR EL MODAL CON ANIMACIÓN
+  cookieModal.style.animation = 'fadeOutBlur 0.4s ease';
+  cookieModal.querySelector('div').style.animation = 'slideDownModal 0.4s ease';
+  
+  setTimeout(() => {
+    cookieModal.style.display = 'none';
+  }, 400);
 });
 
 </script>
