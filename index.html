@@ -12,7 +12,7 @@
     gtag('js', new Date());
     gtag('config', 'AW-18395681577');
   </script>
-  <!-- Fuentes -->
+  <!-- Fuentes: Inter + Merriweather (misma base) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
   <style>
     * {
@@ -23,19 +23,20 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #FCFCF7;
+      background: #F7F9F8;
       color: #1E2A3A;
       line-height: 1.5;
     }
 
     :root {
-      --verde: #1A7A5A;
-      --verde-claro: #E9F3EE;
-      --oro: #C49B3C;
-      --azul-profundo: #1E3A5F;
-      --gris-suave: #F2F4F0;
+      --verde-profundo: #1A6B4A;
+      --verde-claro: #E1F0E9;
+      --azul-gris: #2C3E50;
+      --oro: #B38B3A;
+      --gris-fondo: #F0F2EF;
       --texto: #1E2A3A;
       --muted: #4B5A6A;
+      --blanco: #FFFFFF;
     }
 
     .container {
@@ -46,8 +47,8 @@
 
     /* HEADER */
     header {
-      background: white;
-      border-bottom: 1px solid #E2E8E0;
+      background: var(--blanco);
+      border-bottom: 1px solid #DCE3DF;
       padding: 1rem 0;
       position: sticky;
       top: 0;
@@ -66,12 +67,12 @@
       font-family: 'Merriweather', serif;
       font-weight: 900;
       font-size: 1.4rem;
-      color: var(--azul-profundo);
+      color: var(--azul-gris);
       letter-spacing: -0.02em;
     }
 
     .logo span {
-      color: var(--verde);
+      color: var(--verde-profundo);
     }
 
     .nav-links {
@@ -89,13 +90,13 @@
     }
 
     .nav-links a:hover {
-      color: var(--verde);
+      color: var(--verde-profundo);
     }
 
     .btn-outline {
       background: transparent;
-      border: 2px solid var(--verde);
-      color: var(--verde);
+      border: 2px solid var(--verde-profundo);
+      color: var(--verde-profundo);
       padding: 0.5rem 1.5rem;
       border-radius: 40px;
       font-weight: 600;
@@ -105,12 +106,12 @@
     }
 
     .btn-outline:hover {
-      background: var(--verde);
+      background: var(--verde-profundo);
       color: white;
     }
 
     .btn-solid {
-      background: var(--verde);
+      background: var(--verde-profundo);
       border: none;
       color: white;
       padding: 0.7rem 2rem;
@@ -122,9 +123,9 @@
     }
 
     .btn-solid:hover {
-      background: #12644A;
+      background: #13573C;
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(26, 122, 90, 0.25);
+      box-shadow: 0 8px 20px rgba(26, 107, 74, 0.25);
     }
 
     .mobile-toggle {
@@ -156,7 +157,7 @@
         right: 1rem;
         width: 220px;
         gap: 1rem;
-        border: 1px solid #E2E8E0;
+        border: 1px solid #DCE3DF;
       }
       .nav-links.open {
         display: flex;
@@ -183,12 +184,12 @@
       font-weight: 900;
       font-size: clamp(2.2rem, 4.5vw, 3.8rem);
       line-height: 1.15;
-      color: var(--azul-profundo);
+      color: var(--azul-gris);
       letter-spacing: -0.01em;
     }
 
     .hero h1 em {
-      color: var(--verde);
+      color: var(--verde-profundo);
       font-style: normal;
     }
 
@@ -203,7 +204,7 @@
     .hero-badge {
       display: inline-block;
       background: var(--verde-claro);
-      color: var(--verde);
+      color: var(--verde-profundo);
       padding: 0.3rem 1.2rem;
       border-radius: 40px;
       font-weight: 600;
@@ -223,7 +224,7 @@
       display: flex;
       gap: 2.5rem;
       margin-top: 2.5rem;
-      border-top: 1px solid #E2E8E0;
+      border-top: 1px solid #DCE3DF;
       padding-top: 2rem;
     }
 
@@ -231,7 +232,7 @@
       font-family: 'Merriweather', serif;
       font-weight: 900;
       font-size: 1.8rem;
-      color: var(--azul-profundo);
+      color: var(--azul-gris);
     }
 
     .stat-item p:last-child {
@@ -240,7 +241,7 @@
     }
 
     .hero-visual {
-      background: var(--gris-suave);
+      background: var(--gris-fondo);
       border-radius: 32px;
       padding: 2rem;
       display: flex;
@@ -250,15 +251,15 @@
     }
 
     .card-recursos {
-      background: white;
+      background: var(--blanco);
       border-radius: 20px;
       padding: 1.5rem;
-      border: 1px solid #E2E8E0;
+      border: 1px solid #DCE3DF;
       transition: all 0.2s;
     }
 
     .card-recursos:hover {
-      border-color: var(--verde);
+      border-color: var(--verde-profundo);
     }
 
     .card-recursos .top {
@@ -269,7 +270,7 @@
 
     .card-recursos .tag {
       background: var(--verde-claro);
-      color: var(--verde);
+      color: var(--verde-profundo);
       font-weight: 600;
       font-size: 0.7rem;
       padding: 0.2rem 1rem;
@@ -284,7 +285,7 @@
 
     .barra {
       height: 6px;
-      background: #E2E8E0;
+      background: #DCE3DF;
       border-radius: 10px;
       margin: 0.8rem 0 0.3rem;
       overflow: hidden;
@@ -292,7 +293,7 @@
 
     .barra .fill {
       height: 100%;
-      background: var(--verde);
+      background: var(--verde-profundo);
       border-radius: 10px;
       width: 0%;
     }
@@ -317,12 +318,12 @@
       font-family: 'Merriweather', serif;
       font-weight: 900;
       font-size: clamp(1.8rem, 3vw, 2.8rem);
-      color: var(--azul-profundo);
+      color: var(--azul-gris);
       margin-bottom: 0.5rem;
     }
 
     .section-title em {
-      color: var(--verde);
+      color: var(--verde-profundo);
       font-style: normal;
     }
 
@@ -341,16 +342,16 @@
     }
 
     .paso {
-      background: white;
+      background: var(--blanco);
       border-radius: 24px;
       padding: 2rem 1.8rem;
-      border: 1px solid #E2E8E0;
+      border: 1px solid #DCE3DF;
       transition: all 0.25s;
     }
 
     .paso:hover {
-      border-color: var(--verde);
-      box-shadow: 0 12px 28px rgba(26, 122, 90, 0.06);
+      border-color: var(--verde-profundo);
+      box-shadow: 0 12px 28px rgba(26, 107, 74, 0.06);
       transform: translateY(-4px);
     }
 
@@ -384,10 +385,10 @@
     }
 
     .recurso-card {
-      background: white;
+      background: var(--blanco);
       border-radius: 24px;
       padding: 1.8rem;
-      border: 1px solid #E2E8E0;
+      border: 1px solid #DCE3DF;
     }
 
     .recurso-card .icono {
@@ -408,7 +409,7 @@
 
     .recurso-card .badge {
       background: var(--verde-claro);
-      color: var(--verde);
+      color: var(--verde-profundo);
       font-weight: 600;
       font-size: 0.7rem;
       padding: 0.2rem 0.8rem;
@@ -418,7 +419,7 @@
 
     /* CTA */
     .cta-block {
-      background: var(--azul-profundo);
+      background: var(--azul-gris);
       border-radius: 32px;
       padding: 3.5rem 3rem;
       color: white;
@@ -442,14 +443,14 @@
 
     .cta-block .btn-solid {
       background: white;
-      color: var(--azul-profundo);
+      color: var(--azul-gris);
       font-weight: 700;
     }
 
     .cta-block .btn-solid:hover {
       background: var(--oro);
       color: white;
-      box-shadow: 0 8px 24px rgba(196, 155, 60, 0.3);
+      box-shadow: 0 8px 24px rgba(179, 139, 58, 0.3);
     }
 
     @media (max-width: 600px) {
@@ -463,7 +464,7 @@
 
     /* CONTACTO */
     .contacto-simple {
-      background: var(--gris-suave);
+      background: var(--gris-fondo);
       border-radius: 32px;
       padding: 3rem 2.5rem;
       margin: 3rem 0 4rem;
@@ -480,7 +481,7 @@
     .contacto-simple textarea,
     .contacto-simple select {
       padding: 0.8rem 1.2rem;
-      border: 1px solid #D0D6D0;
+      border: 1px solid #C8D2CC;
       border-radius: 16px;
       font-family: 'Inter', sans-serif;
       font-size: 0.95rem;
@@ -509,7 +510,7 @@
 
     /* FOOTER */
     footer {
-      border-top: 1px solid #E2E8E0;
+      border-top: 1px solid #DCE3DF;
       padding: 2.5rem 0 1.5rem;
       margin-top: 2rem;
       display: flex;
@@ -527,7 +528,7 @@
     }
 
     footer .legal a:hover {
-      color: var(--verde);
+      color: var(--verde-profundo);
     }
 
     @media (max-width: 600px) {
@@ -541,70 +542,146 @@
       }
     }
 
-    /* COOKIES MODAL */
+    /* ===== MODAL COOKIES ===== */
+    /* Mismo diseño, misma tipografía, colores renovados */
     #cookieModal {
       position: fixed;
       inset: 0;
-      background: rgba(20, 30, 40, 0.5);
-      backdrop-filter: blur(6px);
+      background: rgba(30, 42, 58, 0.4);
+      backdrop-filter: blur(40px);
+      -webkit-backdrop-filter: blur(40px);
       z-index: 999;
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      padding: 1.5rem;
+      padding: 1rem;
+      animation: fadeInBlur 0.6s ease;
     }
 
     #cookieModal > div {
-      background: white;
-      max-width: 500px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 32px 32px 0 0;
+      padding: 3rem 2.5rem 2.5rem;
       width: 100%;
-      border-radius: 28px 28px 0 0;
-      padding: 2rem 2rem 2rem;
+      max-width: 540px;
+      box-shadow: 0 -20px 60px rgba(0, 20, 40, 0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      box-shadow: 0 -12px 40px rgba(0,0,0,0.08);
+      gap: 0;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      animation: slideUpModal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
+    /* TÍTULO - Merriweather (mismo estilo serif) */
     #cookieModal h2 {
       font-family: 'Merriweather', serif;
       font-weight: 900;
-      color: var(--azul-profundo);
-      font-size: 1.6rem;
-      letter-spacing: -0.01em;
+      font-size: 2rem;
+      color: var(--azul-gris);
+      margin: 0 0 1.2rem 0;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
     }
 
+    /* TEXTO - Inter normal */
     #cookieModal p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
       color: var(--muted);
-      margin: 0.8rem 0 1.8rem;
+      line-height: 1.8;
+      margin: 0 0 1.8rem 0;
+      max-width: 420px;
     }
 
+    /* BOTÓN - Inter */
     #acceptCookies {
-      background: var(--verde);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      background: var(--verde-profundo);
+      color: #fff;
       border: none;
-      color: white;
-      padding: 0.8rem 2.5rem;
-      border-radius: 60px;
-      font-weight: 700;
-      font-size: 1rem;
+      padding: 1.1rem 2.8rem;
+      border-radius: 16px;
+      font-size: 1.05rem;
       cursor: pointer;
-      transition: all 0.2s;
+      width: 100%;
+      max-width: 400px;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      margin: 0.5rem 0 1rem 0;
+      letter-spacing: 0.04em;
     }
 
     #acceptCookies:hover {
-      background: #12644A;
-      transform: scale(1.02);
+      background: #13573C;
+      box-shadow: 0 16px 40px rgba(26, 107, 74, 0.25);
+      transform: translateY(-3px);
     }
 
+    @keyframes fadeInBlur {
+      from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+      }
+      to {
+        opacity: 1;
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+      }
+    }
+
+    @keyframes slideUpModal {
+      from {
+        opacity: 0;
+        transform: translateY(80px) scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes fadeOutBlur {
+      from {
+        opacity: 1;
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+      }
+      to {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+      }
+    }
+
+    @keyframes slideDownModal {
+      from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(80px) scale(0.95);
+      }
+    }
+
+    /* utilidades */
     .hidden { display: none; }
   </style>
 </head>
 <body>
 
-<!-- COOKIES -->
+<!-- ===== MODAL COOKIES ===== -->
 <div id="cookieModal">
   <div>
-    <h2>🍪 Uso de cookies</h2>
-    <p>Utilizamos cookies para mejorar tu experiencia. Al aceptar, nos ayudas a seguir mejorando.</p>
-    <button id="acceptCookies">Aceptar cookies</button>
+    <h2>USO DE COOKIES</h2>
+    <p>UTILIZAMOS COOKIES PARA GARANTIZAR EL FUNCIONAMIENTO CORRECTO DEL SITIO Y MEJORAR TU EXPERIENCIA EN LA GESTIÓN PÚBLICA.</p>
+    <button id="acceptCookies">ACEPTAR COOKIES</button>
   </div>
 </div>
 
@@ -792,15 +869,27 @@
     });
   });
 
-  // Cookie modal
+  // ===== MODAL COOKIES =====
   const cookieModal = document.getElementById('cookieModal');
   const acceptBtn = document.getElementById('acceptCookies');
+
+  // El modal siempre se muestra al cargar (sin verificación de localStorage)
+  // pero guardamos la aceptación para no mostrarlo en futuras visitas
   if (localStorage.getItem('cookiesAccepted')) {
     cookieModal.style.display = 'none';
   }
-  acceptBtn.addEventListener('click', () => {
+
+  acceptBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     localStorage.setItem('cookiesAccepted', 'true');
-    cookieModal.style.display = 'none';
+    localStorage.setItem('cookiesAcceptedDate', new Date().toISOString());
+
+    // Animación de cierre
+    cookieModal.style.animation = 'fadeOutBlur 0.4s ease';
+    cookieModal.querySelector('div').style.animation = 'slideDownModal 0.4s ease';
+    setTimeout(() => {
+      cookieModal.style.display = 'none';
+    }, 400);
   });
 
   // Contact form
@@ -809,7 +898,7 @@
     const btn = this.querySelector('.btn-solid');
     const original = btn.textContent;
     btn.textContent = '✓ Enviado con éxito';
-    btn.style.background = '#1A7A5A';
+    btn.style.background = '#1A6B4A';
     setTimeout(() => {
       btn.textContent = original;
       btn.style.background = '';
@@ -817,13 +906,13 @@
     }, 3000);
   });
 
-  // Notificaciones light
+  // Notificaciones ligeras
   function noti(msg) {
     const div = document.createElement('div');
     div.textContent = msg;
     Object.assign(div.style, {
       position: 'fixed', bottom: '20px', left: '50%', transform: 'translateX(-50%)',
-      background: '#1E3A5F', color: 'white', padding: '0.8rem 2rem',
+      background: '#2C3E50', color: 'white', padding: '0.8rem 2rem',
       borderRadius: '60px', fontFamily: 'Inter', fontWeight: '500',
       zIndex: '999', boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
       animation: 'fadeInUp 0.3s ease'
